@@ -5,16 +5,9 @@ import logo from '../../assets/logo.png'
 const Navbar = () => {
 
     const links =
-        <div>
-            <li className="text-lg font-semibold"><NavLink to='/' style={({ isActive }) =>
-                isActive
-                && {
-                    color: 'black',
-                    background: 'white',
-                }
-
-            }>Home</NavLink></li>
-        </div>
+        <>
+            <li className="text-lg font-semibold"><NavLink to='/'>Home</NavLink></li>
+        </>
 
     return (
         <div className="bg-[#ff82c3e6]">
@@ -30,8 +23,8 @@ const Navbar = () => {
                     </div>
 
                     <Link>
-                        <div className="flex items-center bg-white py-2 px-3 rounded-xl">
-                            <img src={logo} alt="" className="w-[70px] h-[60px]" />
+                        <div className="flex items-center bg-white py-1 px-3 rounded-xl">
+                            <img src={logo} alt="" className="w-[60px] h-[50px]" />
                             <p className="text-xl text-black font-semibold">Event Management</p>
                         </div>
                     </Link>
@@ -43,8 +36,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/'><button className="font-semibold border-2 border-black py-2 px-5 rounded-lg mr-5">Sign In</button></Link>
-                    <Link to='/'><button className="font-semibold border-2 border-black py-2 px-5 rounded-lg">Sign Up</button></Link>
+                    <Link to='/' className="font-semibold border-2 border-black py-2 px-5 rounded-lg mr-5">Sign In</Link>
+                    <Link to='/signup' className="font-semibold border-2 border-black py-2 px-5 rounded-lg">Sign Up</Link>
                 </div>
             </div >
         </div>
