@@ -8,6 +8,14 @@ const Signin = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
+    const handleSubmit = e => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email')
+        const password = form.get('password')
+        console.log(email, password);
+    }
+
     return (
         <div className='bg-[#ff82c362] h-screen py-28'>
             <div className='flex border-2 border-black rounded-lg max-w-5xl mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]'>
@@ -19,7 +27,7 @@ const Signin = () => {
                 <div className='bg-white w-1/2 relative'>
                     <Link to="/"><span className='absolute right-4 top-2 text-xl font-extrabold text-red-500'><RxCross2></RxCross2></span></Link>
                     <h2 className='text-4xl font-semibold text-center my-5 text-[#ff68b6]'>Sign In</h2>
-                    <form className='px-10'>
+                    <form className='px-10' onSubmit={handleSubmit}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="text-md">Email</span>

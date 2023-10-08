@@ -2,11 +2,56 @@ import signup from '../../assets/login.jpg'
 import { Link } from "react-router-dom";
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../providers/AuthProvider';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
 
     const [showPassword, setShowPassword] = useState(false);
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget)
+        // const name = form.get('name')
+        const email = form.get('email')
+        // const phone = form.get('phone')
+        const password = form.get('password')
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                toast.success('User create successfully', {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            }
+            )
+            .catch(error => {
+                console.error(error);
+                toast.error(`${error.message}`, {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            }
+            )
+    }
 
     return (
         <div className='bg-[#ff82c362] py-7'>
@@ -17,7 +62,7 @@ const Signup = () => {
                 <div className='bg-white w-1/2 relative'>
                     <Link to="/"><span className='absolute right-4 top-2 text-xl font-extrabold text-red-500'><RxCross2></RxCross2></span></Link>
                     <h2 className='text-4xl font-semibold text-center my-5 text-[#ff68b6]'>Register Here</h2>
-                    <form className='px-10'>
+                    <form className='px-10' onSubmit={handleSubmit}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="text-md">Name</span>
@@ -56,12 +101,24 @@ const Signup = () => {
                             <span className="text-md font-semibold">Accept all terms and conditions.</span>
                         </div>
                         <div className="form-control">
-                            <button className="btn bg-[#ff82c3e6] text-md font-medium normal-case">Register</button>
+                            <button type='submit' className="btn bg-[#ff82c3e6] text-md font-medium normal-case">Register</button>
                         </div>
                     </form>
                     <p className='px-10 mt-4'>Already have an account? <Link to="/signin" className="text-[#ff68b6]">Sign In</Link></p>
                 </div>
             </div >
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div >
     );
 };
