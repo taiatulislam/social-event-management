@@ -22,12 +22,52 @@ const Signup = () => {
         // const phone = form.get('phone')
         const password = form.get('password')
 
+        if (password.length < 6) {
+            return toast.error('Password length must be grater than 6', {
+                position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+
+        }
+        else if (!/[A-Z]/.test(password)) {
+            return toast.error('Password should have one capital letter', {
+                position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+        }
+
+        else if (!/[@$!%*?&]/.test(password)) {
+            return toast.error('Password should have one special character', {
+                position: "bottom-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+
+        }
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
                 toast.success('User create successfully', {
                     position: "bottom-right",
-                    autoClose: 5000,
+                    autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
@@ -41,7 +81,7 @@ const Signup = () => {
                 console.error(error);
                 toast.error(`${error.message}`, {
                     position: "bottom-right",
-                    autoClose: 5000,
+                    autoClose: 3000,
                     hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,

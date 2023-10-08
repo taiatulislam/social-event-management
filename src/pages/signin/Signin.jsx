@@ -23,6 +23,7 @@ const Signin = () => {
                     <h2 className="text-4xl font-bold mt-10 mb-5">Welcome To</h2>
                     <img src={logo} alt="" className='w-[100px] h-[100px] bg-white rounded-full p-2 mx-auto' />
                     <p className="text-3xl font-medium mt-5">Social Event Management</p>
+                    <p className="font-bold">Providing reliable service, since 2022</p>
                 </div>
                 <div className='bg-white w-1/2 relative'>
                     <Link to="/"><span className='absolute right-4 top-2 text-xl font-extrabold text-red-500'><RxCross2></RxCross2></span></Link>
