@@ -22,7 +22,7 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    <Link>
+                    <Link to='/'>
                         <div className="flex items-center bg-white py-1 px-3 rounded-xl">
                             <img src={logo} alt="" className="w-[60px] h-[50px]" />
                             <p className="text-xl text-black font-semibold">Event Management</p>
