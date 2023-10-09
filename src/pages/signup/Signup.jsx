@@ -94,11 +94,11 @@ const Signup = () => {
 
     return (
         <div className='bg-[#ff82c362] py-7'>
-            <div className='flex border-2 border-black rounded-lg max-w-5xl mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]'>
-                <div className='w-1/2 relative'>
+            <div className='flex flex-col md:flex-row border-2 border-black rounded-lg max-w-5xl mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]'>
+                <div className='w-full md:w-1/2 relative'>
                     <img src={signup} alt="" />
                 </div>
-                <div className='bg-white w-1/2 relative'>
+                <div className='bg-white w-full md:w-1/2 relative pb-5'>
                     <Link to="/"><span className='absolute right-4 top-2 text-xl font-extrabold text-red-500'><RxCross2></RxCross2></span></Link>
                     <h2 className='text-4xl font-semibold text-center my-5 text-[#ff68b6]'>Register Here</h2>
                     <form className='px-10' onSubmit={handleSubmit}>

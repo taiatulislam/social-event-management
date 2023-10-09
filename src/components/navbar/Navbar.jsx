@@ -9,7 +9,7 @@ const Navbar = () => {
     const links =
         <>
             <li className="text-md font-semibold"><NavLink to='/'>Home</NavLink></li>
-            <li className="text-md font-semibold"><NavLink to='/members'>Members</NavLink></li>
+            <li className="text-md font-semibold"><NavLink to='/gallery'>Gallery</NavLink></li>
             <li className="text-md font-semibold"><NavLink to='/about'>About</NavLink></li>
             <li className="text-md font-semibold"><NavLink to='/contact'>Contact</NavLink></li>
         </>
@@ -22,7 +22,7 @@ const Navbar = () => {
 
     return (
         <div className="bg-[#ff82c3e6]">
-            <div className="navbar max-w-7xl mx-auto">
+            <div className="navbar sm:fle md:flex-row md:max-w-7xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <span tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,13 +30,14 @@ const Navbar = () => {
                         </span>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {links}
+
                         </ul>
                     </div>
 
                     <Link to='/'>
                         <div className="flex items-center bg-white py-1 px-3 rounded-xl">
                             <img src={logo} alt="" className="w-[60px] h-[50px]" />
-                            <p className="text-xl text-black font-semibold">Event Management</p>
+                            <p className="text-sm md:text-xl text-black font-semibold">Event Management</p>
                         </div>
                     </Link>
 
@@ -49,14 +50,13 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {
                         user ?
-
                             <div>
-                                <span className="mr-3 text-lg font-semibold">{user.email}</span>
+                                <span className="md:mr-3 text-xs md:text-md lg:text-lg font-semibold">{user.email}</span>
                                 <button onClick={handleSignOut} className="btn normal-case font-semibold border-2 border-black py-2 px-5 rounded-lg">Sign Out</button>
                             </div>
                             :
-                            <div>
-                                <Link to='/signin' className="font-semibold border-2 border-black py-2 px-5 rounded-lg mr-5">Sign In</Link>
+                            <div className="flex sm:flex-col md:flex-row">
+                                <Link to='/signin' className="font-semibold border-2 border-black py-2 px-5 rounded-lg mr-1 md:mr-5">Sign In</Link>
                                 <Link to='/signup' className="font-semibold border-2 border-black py-2 px-5 rounded-lg">Sign Up</Link>
                             </div>
                     }

@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="max-w-7xl mx-auto mb-10 text-justify">
+            <div className="max-w-7xl mx-auto mb-10 text-justify px-5">
                 <h2 className="text-4xl my-5 font-semibold text-center">About Us</h2>
                 <p>Welcome to Social Event Management, your premier partner in creating memorable and exceptional events that leave a lasting impact. We are thrilled to introduce our passion-driven team and innovative approach to event planning. At Social Event Management, we understand that every event is unique, and our mission is to bring your vision to life. Whether you are planning a corporate conference, a dream wedding, a milestone celebration, or a cultural extravaganza, we are here to make it extraordinary.</p>
 

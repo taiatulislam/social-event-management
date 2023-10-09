@@ -21,27 +21,26 @@ const ServiceDetails = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="w-3/4 mx-auto ">
+            <div className="md:w-full lg:w-3/4 mx-auto px-5">
                 <img src={currentService.image} alt="" className="w-full rounded-lg mt-5 h-[500px] mx-auto" />
                 <p className="text-lg my-3">{currentService.description}</p>
             </div>
-            <div className="grid grid-cols-3 gap-7 w-3/4 mx-auto my-10">
-                <div className="text-center border-2 border-black relative">
+            <div className="grid md:grid-cols-1 px-5 lg:grid-cols-3 gap-7 md:w-full lg:w-3/4 mx-auto my-10">
+                <div className="text-center border-2 border-black">
                     <h2 className="bg-[#C0C0C0] text-white text-3xl font-bold py-3">Silver</h2>
-                    <ul className="text-lg flex flex-col gap-2">
+                    <ul className="text-lg flex flex-col gap-3">
                         <li>Event Planning and Consultation</li>
                         <li>Venue Selection</li>
                         <li>Event Design</li>
                         <li>Guest List</li>
                         <li>Documentation and Reporting</li>
                     </ul>
-
-                    <p className="text-xl font-bold text-pink-400 bg-base-200 py-2 absolute bottom-0 w-full text-center">$ {currentService.silver}</p>
+                    <p className="text-xl font-bold text-pink-400 bg-base-200 py-2 w-full text-center">$ {currentService.silver}</p>
 
                 </div>
                 <div className="text-center border-2 border-black">
                     <h2 className="bg-[#E29926] text-white text-3xl font-bold py-3">Gold</h2>
-                    <ul className="text-lg flex flex-col gap-2">
+                    <ul className="text-lg flex flex-col gap-3">
                         <li>Event Planning and Consultation</li>
                         <li>Venue Selection and Management</li>
                         <li>Event Design</li>
@@ -53,7 +52,7 @@ const ServiceDetails = () => {
                 </div>
                 <div className="text-center border-2 border-black">
                     <h2 className="bg-[#46698C] text-white text-3xl font-bold py-3">Platinum</h2>
-                    <ul className="text-lg flex flex-col gap-2">
+                    <ul className="text-lg flex flex-col gap-3">
                         <li>Event Planning and Consultation</li>
                         <li>Venue Selection and Management</li>
                         <li>Event Design and Theming</li>

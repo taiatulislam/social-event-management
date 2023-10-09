@@ -9,35 +9,35 @@
     {
         "id": 2,
         "image": "https://i.ibb.co/Y06RBZD/comment-2.png",
-        "name": " Haque",
+        "name": " Khalid Chowdhury",
         "rating": "* * * *",
         "comment": "I can't express how grateful we are for their exceptional service. They anticipated our every need and executed flawlessly. I highly recommend their services to anyone seeking perfection."
     },
     {
         "id": 3,
         "image": "https://i.ibb.co/6shbWPJ/comment-3.png",
-        "name": "Sadman Ayan",
+        "name": "Miran Ahmed",
         "rating": "* * * *",
         "comment": "Kudos to the team for their incredible service. They handled everything with grace and precision, making our event stress-free and enjoyable. It was a pleasure working with them."
     },
     {
         "id": 4,
         "image": "https://i.ibb.co/6PwFWGV/comment-4.png",
-        "name": "Jubair Hossain",
+        "name": "Amanta Hossain",
         "rating": "* * *",
         "comment": "The service provided was nothing short of remarkable. They turned our dreams into reality, and the results were breathtaking. Their attention to detail is unmatched."
     },
     {
         "id": 5,
         "image": "https://i.ibb.co/3cNj7Bh/comment-5.png",
-        "name": "Sazzad Hossain",
+        "name": "Shahina Yeasmin",
         "rating": "* * * * *",
         "comment": "A heartfelt thank you to this service for their dedication. They left no stone unturned in making our event a resounding success. We received countless compliments, and it's all thanks to them."
     },
     {
         "id": 6,
         "image": "https://i.ibb.co/yfMpR64/comment-6.png",
-        "name": "Md Alamin",
+        "name": "Tomal Hossain",
         "rating": "* * *",
         "comment": "From start to finish, their service was exceptional. They brought creativity and enthusiasm to every aspect of our event, and the result was a truly memorable experience. Highly recommended!"
     }

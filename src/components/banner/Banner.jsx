@@ -2,7 +2,7 @@ import banner from '../../assets/Banner_wedding.jpg'
 
 const Banner = () => {
     return (
-        <div className="hero h-[70vh] " style={{ backgroundImage: `url(${banner})` }}>
+        <div className="hero sm:h-[100vh] md:h-[80vh] " style={{ backgroundImage: `url(${banner})` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-7xl">

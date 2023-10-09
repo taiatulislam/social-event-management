@@ -5,7 +5,7 @@ const Contact = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto px-5">
                 <h2 className="text-4xl my-5 font-semibold text-center">Contact Us</h2>
                 <div className="mb-10">
                     <h3><span className="text-xl font-bold">Phone no:</span> +880 323629427</h3>

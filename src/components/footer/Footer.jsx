@@ -5,7 +5,7 @@ import { BsFacebook, BsTwitter, BsGoogle, BsYoutube } from 'react-icons/bs';
 const Footer = () => {
     return (
         <div className='bg-[#ff82c3e6] py-10'>
-            <div className="footer p-10 max-w-7xl mx-auto text-base-content place-items-start">
+            <div className="footer md:p-5 lg:p-10 max-w-7xl mx-auto text-base-content place-items-start">
                 <aside className='mx-auto'>
                     <div className='text-center'>
                         <img src={logo} alt="" className='w-[100px] h-[100px] bg-white rounded-full p-2 mx-auto' />
@@ -32,7 +32,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </nav>
             </div>
-            <div className="grid grid-flow-col gap-5 w-60 mx-auto">
+            <div className="grid grid-flow-col mt-10 gap-5 w-60 mx-auto">
                 <Link target='_blank' to="https://www.facebook.com/"><BsFacebook className='text-4xl'></BsFacebook></Link>
                 <Link target='_blank' to="https://twitter.com/"><BsTwitter className='text-4xl'></BsTwitter></Link>
                 <Link target='_blank' to="https://www.google.com/"><BsGoogle className='text-4xl'></BsGoogle></Link>
