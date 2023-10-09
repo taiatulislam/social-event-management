@@ -1,20 +1,89 @@
-import { Link } from "react-router-dom";
-import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { BsEyeFill, BsEyeSlashFill, BsGoogle } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import logo from '../../assets/logo.png'
+import { AuthContext } from "../../providers/AuthProvider";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signin = () => {
 
     const [showPassword, setShowPassword] = useState(false);
+    const { signin, googleSignin } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const handleSubmit = e => {
+    const handleSignin = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
-        console.log(email, password);
+
+        signin(email, password)
+            .then(result => {
+                console.log(result.user);
+                navigate(location.state ? location.state : '/')
+                toast.success('User Sign In successfully', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                })
+            })
+            .catch(error => {
+                console.log(error.code, error.message);
+                return toast.error(`${error.message}`, {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            })
     }
+
+    const handleGoogle = e => {
+        e.preventDefault();
+        googleSignin()
+            .then(result => {
+                console.log(result.user);
+                navigate(location.state ? location.state : '/')
+                toast.success('User Sign In successfully', {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                })
+            })
+            .catch(error => {
+                console.log(error.code, error.message);
+                return toast.error(`${error.message}`, {
+                    position: "bottom-right",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+            })
+
+    }
+
 
     return (
         <div className='bg-[#ff82c362] h-screen py-28'>
@@ -28,7 +97,7 @@ const Signin = () => {
                 <div className='bg-white w-1/2 relative'>
                     <Link to="/"><span className='absolute right-4 top-2 text-xl font-extrabold text-red-500'><RxCross2></RxCross2></span></Link>
                     <h2 className='text-4xl font-semibold text-center my-5 text-[#ff68b6]'>Sign In</h2>
-                    <form className='px-10' onSubmit={handleSubmit}>
+                    <form className='px-10' onSubmit={handleSignin}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="text-md">Email</span>
@@ -54,9 +123,24 @@ const Signin = () => {
                             <button className="btn bg-[#ff82c3e6] text-md font-medium normal-case">Sign In</button>
                         </div>
                     </form>
+                    <div className="form-control mt-6 px-10">
+                        <button onClick={handleGoogle} className="btn bg-base-400 text-md font-medium normal-case"><BsGoogle></BsGoogle>Google Sign In</button>
+                    </div>
                     <p className='px-10 mt-4 mb-10'>New to the site? <Link to="/signup" className="text-[#ff68b6]">Sign Up</Link></p>
                 </div>
             </div >
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </div >
     );
 };

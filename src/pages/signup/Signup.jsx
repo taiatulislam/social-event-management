@@ -1,5 +1,5 @@
 import signup from '../../assets/login.jpg'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsEyeFill, BsEyeSlashFill } from 'react-icons/bs';
 import { RxCross2 } from 'react-icons/rx';
 import { useContext, useState } from 'react';
@@ -11,8 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Signup = () => {
 
     const [showPassword, setShowPassword] = useState(false);
-
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -74,11 +74,10 @@ const Signup = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                });
-            }
-            )
+                })
+                navigate('/')
+            })
             .catch(error => {
-                console.error(error);
                 toast.error(`${error.message}`, {
                     position: "bottom-right",
                     autoClose: 3000,

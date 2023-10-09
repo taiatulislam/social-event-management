@@ -6,7 +6,6 @@ const ServiceDetails = () => {
 
     const [currentService, setCurrentService] = useState({});
     const { id } = useParams();
-
     const services = useLoaderData();
 
     useEffect(() => {
