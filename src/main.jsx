@@ -17,6 +17,7 @@ import PrivateRoute from './routes/PrivateRoute';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Gallery from './pages/gallery/Gallery';
+import Profile from './pages/profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         path: "/serviceDetails/:id",
         loader: () => fetch('/services.json'),
         element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>
+      },
+      {
+        path: "/profile",
+        element: <PrivateRoute><Profile></Profile></PrivateRoute>
       },
       {
         path: "/gallery",

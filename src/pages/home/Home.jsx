@@ -6,6 +6,7 @@ import Reviews from "../reviews/Reviews";
 import Members from "../members/Members";
 
 const Home = () => {
+
     return (
         <div>
             <Navbar></Navbar>

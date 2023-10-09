@@ -9,6 +9,7 @@ const Navbar = () => {
     const links =
         <>
             <li className="text-md font-semibold"><NavLink to='/'>Home</NavLink></li>
+            <li className="text-md font-semibold"><NavLink to='/profile'>Profile</NavLink></li>
             <li className="text-md font-semibold"><NavLink to='/gallery'>Gallery</NavLink></li>
             <li className="text-md font-semibold"><NavLink to='/about'>About</NavLink></li>
             <li className="text-md font-semibold"><NavLink to='/contact'>Contact</NavLink></li>
@@ -50,8 +51,9 @@ const Navbar = () => {
                 <div className="navbar-end">
                     {
                         user ?
-                            <div>
-                                <span className="md:mr-3 text-xs md:text-md lg:text-lg font-semibold">{user.email}</span>
+                            <div className="flex flex-row items-center">
+                                <img src={user?.photoURL} alt="" className="w-[40px] h-[40px] rounded-full mr-3" />
+                                <p><span className="md:mr-3 text-xs md:text-md lg:text-lg font-semibold">{user.email}</span></p>
                                 <button onClick={handleSignOut} className="btn normal-case font-semibold border-2 border-black py-2 px-5 rounded-lg">Sign Out</button>
                             </div>
                             :

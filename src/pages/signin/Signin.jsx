@@ -25,7 +25,7 @@ const Signin = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(location.state ? location.state : '/')
-                toast.success('User Sign In successfully', {
+                toast.success('Sign In successfully', {
                     position: "bottom-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -34,7 +34,7 @@ const Signin = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                })
+                });
             })
             .catch(error => {
                 console.log(error.code, error.message);
@@ -56,7 +56,6 @@ const Signin = () => {
         googleSignin()
             .then(result => {
                 console.log(result.user);
-                navigate(location.state ? location.state : '/')
                 toast.success('User Sign In successfully', {
                     position: "bottom-right",
                     autoClose: 3000,
@@ -67,6 +66,7 @@ const Signin = () => {
                     progress: undefined,
                     theme: "light",
                 })
+                navigate(location.state ? location.state : '/')
             })
             .catch(error => {
                 console.log(error.code, error.message);

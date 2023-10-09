@@ -8,15 +8,10 @@ const ServiceDetails = () => {
     const { id } = useParams();
     const services = useLoaderData();
 
-    console.log(services);
-    console.log(id);
-
     useEffect(() => {
         const service = services?.find(service => service.id === parseInt(id))
         setCurrentService(service);
     }, [id, services])
-
-    console.log(currentService);
 
     return (
         <div>

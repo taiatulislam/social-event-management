@@ -17,9 +17,9 @@ const Signup = () => {
     const handleSubmit = e => {
         e.preventDefault();
         const form = new FormData(e.currentTarget)
-        // const name = form.get('name')
+        const name = form.get('name')
         const email = form.get('email')
-        // const phone = form.get('phone')
+        const photo = form.get('photo')
         const password = form.get('password')
 
         if (password.length < 6) {
@@ -65,7 +65,7 @@ const Signup = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                toast.success('User create successfully', {
+                toast.success('Create User successfully', {
                     position: "bottom-right",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -74,9 +74,10 @@ const Signup = () => {
                     draggable: true,
                     progress: undefined,
                     theme: "light",
-                })
+                });
                 navigate('/')
             })
+
             .catch(error => {
                 toast.error(`${error.message}`, {
                     position: "bottom-right",
@@ -116,9 +117,9 @@ const Signup = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="text-md">Phone No</span>
+                                <span className="text-md">Photo URL</span>
                             </label>
-                            <input type="number" name="phone" placeholder="Your phone" className="input border-2 border-[#ff82c3e6]" required />
+                            <input type="text" name="photo" placeholder="Your photo URL" className="input border-2 border-[#ff82c3e6]" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
