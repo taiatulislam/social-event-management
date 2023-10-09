@@ -15,15 +15,15 @@ const Footer = () => {
                 </aside>
                 <nav className='mx-auto'>
                     <header className="footer-title text-black">Services</header>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <a className="link link-hover">Weeding Party</a>
+                    <a className="link link-hover">Birthday Party</a>
+                    <a className="link link-hover">Anniversary</a>
+                    <a className="link link-hover">Engagement Party</a>
                 </nav>
                 <nav className='mx-auto'>
                     <header className="footer-title font-bold text-black">Company</header>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
+                    <a href='/about' className="link link-hover">About us</a>
+                    <a href='/contact' className="link link-hover">Contact</a>
                 </nav>
                 <nav className='mx-auto'>
                     <header className="footer-title text-black">Legal</header>

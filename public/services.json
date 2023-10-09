@@ -4,41 +4,53 @@
         "image": "https://i.ibb.co/tq42dWx/Birthday.jpg",
         "title": "Birthday Party",
         "description": "Let us plan your perfect birthday party! Our event management team specializes in creating memorable celebrations tailored to your preferences. From venue selection to decor and entertainment, we handle every detail to ensure a stress-free and fun-filled experience for you and your guests. From exquisite decorations and delicious catering to entertainment that keeps guests engaged, we ensure a seamless and enjoyable experience for everyone. With meticulous attention to detail, we guarantee a birthday party that exceeds your expectations, leaving you to savor every moment with loved ones. Let us make your special day truly exceptional.",
-        "price": 7999
+        "silver": 7999,
+        "gold": 8999,
+        "platinum": 9999
     },
     {
         "id": 2,
         "image": "https://i.ibb.co/qFfzpn5/Engagement.jpg",
         "title": "Engagement Party",
         "description": "Elevate your engagement party with our expert event management services. We specialize in creating memorable celebrations that capture the essence of your love story. From selecting the perfect venue to curating a theme that reflects your personalities, our dedicated team handles every detail. Enjoy stunning decor, gourmet cuisine, and entertainment that sets the mood for a joyous occasion, while we ensure a seamless and unforgettable experience for you and your guests. Whether it is an intimate gathering or a lavish affair, we guarantee an engagement party that surpasses expectations, allowing you to cherish the start of your journey together with your loved ones.",
-        "price": 12999
+        "silver": 12999,
+        "gold": 13999,
+        "platinum": 14999
     },
     {
         "id": 3,
         "image": "https://i.ibb.co/ZXTD2K2/Marriage.jpg",
         "title": "Wedding Event",
         "description": "Experience the wedding of your dreams with our expert event management services. We specialize in crafting flawless and enchanting wedding celebrations that reflect your unique love story. From selecting the perfect venue to designing a theme that mirrors your personalities, our dedicated team handles every aspect. Revel in exquisite decor, gourmet cuisine, and captivating entertainment that sets the stage for an unforgettable day, while we ensure a seamless and joyous experience for you and your guests. Whether it is an intimate gathering or a grand affair, we guarantee a wedding that exceeds your expectations, leaving you with cherished memories of your special day.",
-        "price": 22999
+        "silver": 19999,
+        "gold": 20999,
+        "platinum": 21999
     },
     {
         "id": 4,
         "image": "https://i.ibb.co/NnFbWgm/anniversary.jpg",
         "title": "Anniversary Party",
         "description": "Mark your cherished milestones with our anniversary party event management expertise. We specialize in creating heartwarming celebrations that honor your journey together. From selecting the perfect venue to crafting a theme that reflects your love story, our dedicated team handles all the details. Revel in elegant decor, gourmet cuisine, and entertainment that captures your unique bond, while we ensure a seamless and delightful experience for you and your guests. Whether it is a cozy gathering or a grand celebration, we guarantee an anniversary party that exceeds expectations, allowing you to relive the magic of your love and create beautiful memories with your loved ones.",
-        "price": 17999
+        "silver": 13999,
+        "gold": 14999,
+        "platinum": 15999
     },
     {
         "id": 5,
         "image": "https://i.ibb.co/GCkJVy5/baby-shower.jpg",
         "title": "Baby Shower",
         "description": "Welcome the arrival of a precious new life with our expert baby shower event management services. We specialize in creating heartwarming and joy-filled celebrations that honor the expecting parents and their growing family. From choosing a delightful venue to designing a theme that reflects the babys future adventures, our dedicated team takes care of every detail. Enjoy charming decorations, delectable treats, and entertaining activities that celebrate this special moment, while we ensure a seamless and delightful experience for all guests. Whether it is an intimate gathering or a grand affair, we guarantee a baby shower that exceeds expectations, creating beautiful memories for the parents-to-be.",
-        "price": 15999
+        "silver": 12999,
+        "gold": 13999,
+        "platinum": 14999
     },
     {
         "id": 6,
         "image": "https://i.ibb.co/Wk6hKPH/retirement.png",
         "title": "Retirement Party",
         "description": "Celebrate the end of a fulfilling career and the beginning of a new chapter with our expert retirement party event management services. We specialize in creating memorable and heartfelt celebrations that honor the retirees achievements and legacy. From selecting a fitting venue to crafting a theme that reflects their passions and future plans, our dedicated team handles every detail. Enjoy tasteful decorations, gourmet cuisine, and entertainment that resonates with the retirees interests, while we ensure a seamless and enjoyable experience for all attendees. Whether it is an intimate gathering or a grand affair, we guarantee a retirement party that exceeds expectations, leaving lasting impressions and warm memories for the retiree and guests.",
-        "price": 10999
+        "silver": 7999,
+        "gold": 8999,
+        "platinum": 9999
     }
 ]

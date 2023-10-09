@@ -81,9 +81,7 @@ const Signin = () => {
                     theme: "light",
                 });
             })
-
     }
-
 
     return (
         <div className='bg-[#ff82c362] h-screen py-28'>
