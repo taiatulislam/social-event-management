@@ -1,8 +1,13 @@
-# React + Vite
+# Description
+Social event management is a event management organization. They profide event management services like Birthday party, Marriage aniversary, Engagement, Baby shower ect. Through this site a user can see different packages and rates based on facilities. They can book the service. In this website there is a gallery section where we provide our covered events. In this system there is authentication system for find valid user.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Technology
+- React
+- Tailwind
+- Firebase
+- Express
+- Node
+- Mongodb
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Site important links
+### Live site link: https://social-event-management-50d89.web.app/
