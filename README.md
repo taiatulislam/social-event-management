@@ -1,10 +1,10 @@
 # Description
-Social event management is a event management organization. They profide event management services like Birthday party, Marriage aniversary, Engagement, Baby shower ect. Through this site a user can see different packages and rates based on facilities. They can book the service. In this website there is a gallery section where we provide our covered events. In this system there is authentication system for find valid user.
+Social event management is an event management organization. They provide event management services for Birthday parties, Marriage anniversaries, Engagements, Baby showers etc. Through this site, a user can see different packages and rates based on facilities. They can book the service. On this website, there is a gallery section where we provide our covered events. In this system, there is an authentication system for finding valid users.
 
 # Features
-- Protected route: In this website, there is private route implemented. There is some route where a user can go only if he/she sign in to the system.
-- Firebase authentication: Here I implement firebased authentication system. Two types of aythentication system is implemented email-password based and google based.
-- Marqee: In the review section I use marqee for a good user experience also easy to use. 
+- Protected route: On this website, there is an implemented private route. There is some route where a user can go only if he/she signs in to the system.
+- Firebase authentication: Here I implement a firebase authentication system. Two types of authentication system is implemented email-password based and Google based.
+- Marquee: In the review section I use marquee for a good user experience and also easy to use. 
 
 # Technology
 - React
